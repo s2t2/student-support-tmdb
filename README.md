@@ -17,5 +17,5 @@ pip install requests python-dotenv
 From within an anaconda virtual environment, run the script:
 
 ```sh
-python my_script.py
+python my_script2.py
 ```
