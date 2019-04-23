@@ -31,13 +31,15 @@ data = requests.get(request_url)
 
 if data.status_code == 200:
     json_string = data.text
-    matching_movies = json.loads(json_string)
+    parsed_response = json.loads(json_string)
 
-    # breakpoint()
-    # (Pdb) type(matching_movies)
+    #breakpoint()
+    # (Pdb) type(parsed_response)
     # <class 'dict'>
-    # (Pdb) matching_movies.keys()
+    # (Pdb) parsed_response.keys()
     # dict_keys(['page', 'total_results', 'total_pages', 'results'])
+
+    matching_movies = parsed_response["results"]
 
     print(type(matching_movies))
     print("-------------------")
